@@ -1,0 +1,46 @@
+<section class=" post-box container py-1 px-3 m-3 my-5">
+    <div class=" row  d-flex post-header bg-dark text-light " data-id='{{post.id}}'>
+        <p class="col-12 col-md-3 post-title">
+            <strong>{{post.title}}-- </strong>{{post.user.user_name}}<span class="date">--{{post.updatedAt}}</span>
+            </p>
+    </div>
+    <div class="row post-body p-2 border">
+        <p>
+            {{post.content}}
+        </p>
+    </div>
+</div>
+
+</section>
+
+{{#each comments as |comment|}}
+<section class=" post-box container py-1 px-3 m-3 my-5">
+    <div class=" row  d-flex post-header bg-dark text-light">
+
+        <p class="col-12 col-md-3 post-title">
+            {{comment.user.user_name}} --{{comment.updatedAt}}
+            </p>
+    </div>
+    <div class="row post-body p-2 border">
+        <p>
+            {{comment.content}}
+        </p>
+    </div>
+</div>
+
+</section>
+{{/each}}
+
+
+      <button id="comment-btn" class="btn text-light fw-bold border p-1">add comment</button>
+
+<form class="containter bg-dark justify-content-start my-2" id="comment-wrapper">
+
+<textarea id="new-comment" name="post" rows="5" cols="33" class="m-2">
+post goes here
+</textarea>
+<input class="btn text-light" id="submit-comment" type="submit" value="Submit">
+</form>
+
+<script src="/js/handleComment.js"></script>
+<script></script>

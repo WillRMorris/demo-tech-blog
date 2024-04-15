@@ -1,0 +1,53 @@
+:root {
+    --primary: #3d5852;
+    --secondary: #86938f;
+    --tertiary: #5e877f;
+    --quatrinary: #6c6b67;
+    --light: #e3e4e3;
+    --dark: #182c23;
+    --error: rgb(228, 46, 1);
+    --border-radius: 0.3rem;
+  }
+  
+  #add-btn {
+    position: fixed;
+    display: block;
+    bottom: 10%;
+     right: 5%;
+     background-color: blue;
+     border-radius: 15%;
+  }
+#comment-btn{
+  position: fixed;
+  display: block;
+  bottom: 10%;
+   right: 5%;
+   background-color: blue;
+   border-radius: 15%;
+}
+
+  .date {
+    font-size: 0.75em;
+    float: right;}
+
+    .post-title{
+      display: inline;
+      width: 100%;
+    }
+
+    #input-wrapper{
+      position: fixed;
+      bottom: 10%;
+      left: 5%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+    #comment-wrapper{
+      position: fixed;
+      bottom: 10%;
+      left: 5%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }

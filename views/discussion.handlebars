@@ -1,0 +1,33 @@
+{{!-- <div class="containter display-flex flex-column justify-space-between align-center p-2 m-3"></div> --}}
+{{#each posts as |post|}}
+
+<section class=" post-box container py-1 px-3 m-3 my-5">
+    <div class=" row  d-flex post-header bg-dark text-light" data-id='{{post.id}}'>
+        <p class="col-12 col-md-3 post-title">
+            <strong>{{post.title}}-- </strong>{{post.user.user_name}}<span class="date">--{{post.updatedAt}}</span>
+            </p>
+    </div>
+    <div class="row post-body p-2 border">
+        <p>
+            {{post.content}}
+        </p>
+    </div>
+</div>
+
+</section>
+{{/each}}
+
+
+      <button class="btn text-light fw-bold " id="add-btn">add post</button>
+
+<form class="containter bg-dark justify-content-start my-2" id="input-wrapper">
+  <input type="text" id="title" value="Title" class="m-2"><br><br>
+
+<textarea id="new-post" name="post" rows="5" cols="33" class="m-2">
+post goes here
+</textarea>
+<input class="btn text-light" id="submit-post" type="submit" value="Submit">
+</form>
+
+<script src="./js/handlePost.js"></script>
+<script src="./js/discussionsPage.js"></script>
